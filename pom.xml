@@ -6,7 +6,7 @@
 	<groupId>xiongdihoutai</groupId>
 	<artifactId>juediqiusheng</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!--	<packaging>war</packaging>-->
+	<!--<packaging>war</packaging>-->
 	<packaging>jar</packaging>
 
 	<name>juediqiusheng</name>
@@ -102,11 +102,11 @@
 		</dependency>
 
 		<!-- 热部署依赖-->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
-		</dependency>
+		</dependency>-->
 
 		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -122,6 +122,27 @@
 				<version>1.2.5.RELEASE</version>
 				<configuration>
 					<fork>true</fork>
+					<classifier>boot</classifier>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
+					<!-- 部署在百度云 bae 上，一定要叫 ROOT.war -->
+					<!-- 虽然 IDEA 工具报提示警告，但是可以不理会，不影响使用 -->
+					<warName>root</warName>
+					<webResources>
+						<resource>
+							<directory>src/main/resources</directory>
+							<targetPath>WEB-INF/classes</targetPath>
+							<filtering>true</filtering>
+						</resource>
+					</webResources>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -144,15 +165,15 @@
 					<resource>
 						<directory>src/main/resources</directory>
 					</resource>
-					<resource>
-						<!-- 指定resources插件处理哪个目录下的资源文件 -->
+					<!--<resource>
+						&lt;!&ndash; 指定resources插件处理哪个目录下的资源文件 &ndash;&gt;
 						<directory>src/main/webapp</directory>
-						<!--注意此次必须要放在此目录下才能被访问到 -->
+						&lt;!&ndash;注意此次必须要放在此目录下才能被访问到 &ndash;&gt;
 						<targetPath>META-INF/resources</targetPath>
 						<includes>
 							<include>**/**</include>
 						</includes>
-					</resource>
+					</resource>-->
 				</resources>
 			</build>
 		</profile>

@@ -22,7 +22,7 @@
     <script src="bootstrapcalendar/js/bootstrap-datetimepicker.zh-CN.js"></script>
 </head>
 <body>
-<form role="form" action="/findalluserBydate" method="post">
+<form role="form" action="${pageContext.request.contextPath}/findalluserBydate" method="post">
     <div class="col-lg-9">
         <div class="input-group">
             <div class="input-append date form_datetime">
@@ -34,7 +34,7 @@
     <input class="center" value="查询" id="dengl" type="submit">
     </div><!-- /.row -->
 </form>
-<form role="form" action="/findalluser" method="post">
+<form role="form" action="${pageContext.request.contextPath}/findalluser" method="post">
     <input class="center" value="查询全部" id="dengl" type="submit">
 </form>
 <table class="table table-bordered table-striped table-bordered table-condensed">

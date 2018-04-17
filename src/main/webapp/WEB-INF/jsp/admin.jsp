@@ -29,7 +29,7 @@ $(document).ready(function() {
   <strong>后台管理系统</strong>
   <em>Management System</em>
  </dt>
- <form action="/login" method="post">
+ <form action="${pageContext.request.contextPath}/login" method="post">
  <dd class="user_icon">
   <input name="username" placeholder="账号" class="login_txtbx" type="text">
  </dd>
