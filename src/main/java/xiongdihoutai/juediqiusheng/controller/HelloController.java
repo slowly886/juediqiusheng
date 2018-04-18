@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
+
+
 public class HelloController {
 
     @Autowired
@@ -36,7 +38,6 @@ public class HelloController {
      */
     @RequestMapping("/login")
     public String login(String username, String password, HttpServletRequest request) {
-        String realPath = request.getContextPath();
         if(username.equals("admin")&&password.equals("admin")){
             return "redirect:/findalluser";
         }
