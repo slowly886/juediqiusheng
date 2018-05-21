@@ -8,6 +8,7 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrapcalendar/js/bootstrap-datetimepicker.min.js"></script>
     <script src="bootstrapcalendar/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="vue/vue.js"></script>
 </head>
 <body>
 <form role="form" th:action="@{/findalluserBydate}" method="post">
@@ -25,16 +26,21 @@
 <form role="form" th:action="@{/findalluser}" method="post">
     <input class="center" value="查询全部" id="dengl" type="submit">
 </form>
-<table class="table table-bordered table-striped table-bordered table-condensed">
+<table id="app-1" class="table table-bordered table-striped table-bordered table-condensed">
     <tr>
         <td>用户名</td>
         <td>密码</td>
         <td>登录时间</td>
     </tr>
-    <tr th:each="item : ${list}">
+   <!-- <tr th:each="item : ${list}">
         <td th:text="${item.username}"></td>
         <td th:text="${item.password}"></td>
         <td th:text="${item.createdate}"></td>
+    </tr>-->
+    <tr  v-for = "item in items ">
+        <td>{{ item.username}}</td>
+        <td>{{ item.password}}</td>
+        <td>{{ item.createdate}}</td>
     </tr>
 </table>
 <script type="text/javascript">
@@ -44,6 +50,15 @@
         format: "yyyy-mm-dd",//日期格式
         autoclose: true,//选中关闭
         todayBtn: true//今日按钮
+    });
+</script>
+<script th:inline="javascript">
+    var items = /*[[${list}]]*/ [];
+    new Vue({
+        el: '#app-1',
+        data: {
+            items: items
+        }
     });
 </script>
 </body>

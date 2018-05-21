@@ -2,10 +2,7 @@ package xiongdihoutai.juediqiusheng.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
@@ -23,5 +20,6 @@ public class User {
     private String password;
 
     @Column(name = "createdate")
+    @Temporal(TemporalType.DATE)
     private Date createdate;
 }
