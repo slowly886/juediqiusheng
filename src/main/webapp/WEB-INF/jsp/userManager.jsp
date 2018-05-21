@@ -50,10 +50,6 @@
             <td><fmt:formatDate value="${item.createdate}" pattern="yyyy-MM-dd"/></td>
         </tr>
     </c:forEach>
-    <%-- <th>密码</th>--%>
-    <%--<c:forEach var="item" items="${list}">
-        <th>${item.username}</th>
-    </c:forEach>--%>
 </table>
 <script type="text/javascript">
     $(".form_datetime").datetimepicker({
